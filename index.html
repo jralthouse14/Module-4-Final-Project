@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f8f5b943b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav__container">
+        <div class="nav__row">
+            <figure class="logo">
+                <img class="cinema__logo" src="https://i.fbcd.co/products/resized/resized-750-500/4170e6ab0f6d30dca42c2df7cf52fb999351cb63d11203175d4ddb638955e9c2.jpg" alt="">
+            </figure>
+            <div class="nav__list">
+                <ul class="nav__links">
+                  <li><a href="#" class="nav__link">Home</a></li>
+                  <li><a href="#" class="nav__link">Find your movie</a></li>
+                  <li><a href="#" class="nav__link nav__link--primary">CONTACT</a></li>
+                </ul>
+            </div>
+            <button class="btn__menu menu--open" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list">
+                    <a href="#about" class="menu__link" onclick="closeMenu()">Home</a>
+                    </li>
+                    <li class="menu__list">
+                    <a href="#blog" class="menu__link" onclick="closeMenu()">Find your movie</a>
+                    </li>
+                    <li class="menu__list">
+                    <a href="#pricing" class="menu__link" onclick="closeMenu()">Contact</a>
+                </ul>
+            </div>
+        </div>
+          <h1 class="header">Browse our movies</h1>
+        <div class="search">
+            <form action="/search-results" method="get" role="search">
+                <input type="text" class="search-input" placeholder="Search by title or keyword" onchange="searchChange(event)"/>
+                <button id="search__submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="row__main">
+        <div class="row__results">
+            <h2 class="results__text">Search results: <span class="searchName"></span>
+        </div>
+        <div class="sort">
+            <select name="movieSort" id="movieSort" onchange="sortChange(event)">
+                <option disabled selected value="">Sort by...</option>
+                <option value="newest">New to Old</option>
+                <option value="oldest">Old to New</option>
+            </select>
+        </div>
+    </div>
+    <div class="movies__loading">
+        <i class="fa-solid fa-spinner"></i>
+    </div>
+    <div class="movies">
+        <div class="movie">
+          <img src="" alt="">
+          <h2></h2>
+          <h4></h4>
+          <button></button>
+        </div>
+    </div>
+    <section id="footer">
+        <div class="container__footer">
+            <img class="footer__img" src="https://i.fbcd.co/products/resized/resized-750-500/4170e6ab0f6d30dca42c2df7cf52fb999351cb63d11203175d4ddb638955e9c2.jpg"></i>
+            <p class="footer__copyright">Copyright &copy 2026 <br> Justin Althouse productions. <br> All rights reserved.</p>
+            <ul class="nav__links2">
+                <li><a href="#" class="nav__link nav__link2">Home</a></li>
+                <li><a href="#" class="nav__link nav__link2">Find your movie</a></li>
+                <li><a href="#" class="nav__link nav__link--primary2">Contact</a></li>
+            </ul>    
+        </div>
+    </section>
+<script src="app.js"></script>
+</body>
+</html>
